@@ -6,12 +6,18 @@
     <script src="main.js"></script>
   </head>
   <body>
+    <form data-component='simple-item-form'>
+      <input type="text" name="firstName" placeholder="First Name" autofocus>
+      <input type="text" name="lastName" placeholder="Last Name">
+      <button>Add</button>
+    </form>
     <ul data-component="simple-list"></ul>
     <script id="list-item-template" type="text/template">
-      <p>
+      <li>
         <span class="firstName">{{firstName}}</span>
         <span class="lastName">{{lastName}}</span>
-      </p>
+        <button class="remove">Remove</button
+      </li>
     </script>
   </body>
 </html>
