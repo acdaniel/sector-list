@@ -1,6 +1,6 @@
 {
   "name": "sector-list",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A list component that allows repeating and binding to a collection for the Sector library",
   "main": "lib/index.js",
   "scripts": {
