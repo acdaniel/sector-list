@@ -1,12 +1,12 @@
 /**
- * sector-list v0.1.6
+ * sector-list v0.1.7
  * A list component that allows repeating and binding to a collection for the Sector library
  * https://github.com/acdaniel/sector-list
  *
  * Copyright 2014 Adam Daniel <adam@acdaniel.com>
  * Released under the MIT license
  *
- * Date: 2014-06-03T21:19:43.925Z
+ * Date: 2014-06-03T21:27:21.143Z
  */
 !function(e){if("object"==typeof exports)module.exports=e();else if("function"==typeof define&&define.amd)define(e);else{var o;"undefined"!=typeof window?o=window:"undefined"!=typeof global?o=global:"undefined"!=typeof self&&(o=self);var f=o;f=f.sector||(f.sector={}),f=f.ext||(f.ext={}),f.list=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
 var sector; try { sector = _dereq_('sector'); } catch (e) { sector = window.sector; }
@@ -50,8 +50,8 @@ module.exports =  function List () {
     }
     var options = this.itemComponentOptions ? sector.clone(this.itemComponentOptions) : {};
     options.id = sector.uniqueId(this.id + '-i');
+    options.data = data;
     component.attachTo(el, options);
-    component.update(data);
     if ('undefined' === typeof index || index >= this.itemParent.children.length) {
       this.itemParent.appendChild(el);
     } else {
